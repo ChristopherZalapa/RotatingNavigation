@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400&family=Montserrat&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -20,51 +20,102 @@ body {
 	width: 100vw;
 	min-height: 100vh;
 	padding: 50px;
-    
-    &.show-nav {
+
+	&.show-nav {
 		transform: rotate(-20deg);
-    }
-    
-    .circle-container {
-        position: fixed;
-        top: -100px;
-        left: -100px;
+	}
 
-            .circle {
-                background-color: #6C6B70;
-                height: 200px;
-                width: 200px;
-                border-radius: 50%;
-                position: relative;
-                transition: transform 0.5s linear;
+	.circle-container {
+		position: fixed;
+		top: -100px;
+		left: -100px;
 
-                button {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    height: 100px;
-                    background: transparent;
-                    border: 0;
-                    font-size: 26px;
-                    color: #fff;
+		.circle {
+			background-color: #6c6b70;
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;
+			position: relative;
+			transition: transform 0.5s linear;
 
-                    &:focus {
-                        outline: none;
-                    }
+			button {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				height: 100px;
+				background: transparent;
+				border: 0;
+				font-size: 26px;
+				color: #fff;
 
-                    &#open {
-                        left: 60%;
-                        
-                    }
-                }
+				&:focus {
+					outline: none;
+				}
+
+				&#open {
+					left: 60%;
+				}
+
+				&#close {
+					top: 60%;
+					transform: rotate(90deg);
+					transform-origin: top left;
+				}
+			}
+		}
+	}
+}
+
+nav {
+	position: fixed;
+	bottom: 40px;
+	left: 0;
+	z-index: 100;
+
+	ul {
+		list-style: none;
+		padding-left: 30px;
+
+		li {
+			text-transform: uppercase;
+			color: #fff;
+			margin: 40px 0;
+			// transform: translateX(-100%);
+            transition: transform 0.4s ease-in;
+            
+            + li {
+                margin-left: 20px;
             }
-    }
+
+            i {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+		}
+	}
 }
 
 .content {
-    width: 100%;
+	max-width: 1000px;
+	margin: 50px auto;
 
-    img {
-        width: 100%;
-    }
+	h1 {
+		margin: 0;
+	}
+
+	p {
+		font-family: "Montserrat", sans-serif;
+		color: #333;
+		line-height: 1.5;
+	}
+
+	small {
+		color: #555;
+		font-style: italic;
+	}
+
+	img {
+		max-width: 100%;
+	}
 }

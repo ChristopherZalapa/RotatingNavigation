@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400&family=Montserrat&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .container .circle-container .circle {
-  background-color: #6C6B70;
+  background-color: #6c6b70;
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -41,6 +41,7 @@ body {
 }
 
 .container .circle-container .circle button {
+  cursor: pointer;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,11 +60,61 @@ body {
   left: 60%;
 }
 
+.container .circle-container .circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li + li {
+  margin-left: 20px;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
 .content {
-  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content p {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
 }
 
 .content img {
-  width: 100%;
+  max-width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
