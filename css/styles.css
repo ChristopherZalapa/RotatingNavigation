@@ -25,6 +25,40 @@ body {
   transform: rotate(-20deg);
 }
 
+.container .circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.container .circle-container .circle {
+  background-color: #6C6B70;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container .circle-container .circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.container .circle-container .circle button:focus {
+  outline: none;
+}
+
+.container .circle-container .circle button#open {
+  left: 60%;
+}
+
 .content {
   width: 100%;
 }
