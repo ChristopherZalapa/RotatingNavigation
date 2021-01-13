@@ -30,6 +30,10 @@ body {
   transition-delay: 0.3s;
 }
 
+.container.show-nav.circle {
+  transform: rotate(-70deg);
+}
+
 .container .circle-container {
   position: fixed;
   top: -100px;
